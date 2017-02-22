@@ -1,0 +1,7 @@
+<resources>
+    <string name="title_activity_settings">Settings</string>
+    <string name="update_end_call_count">No. Calls</string>
+    <string name="update_end_call_summary">Update after a number of calls.</string>
+    <string name="count">Enter Number</string>
+
+</resources>

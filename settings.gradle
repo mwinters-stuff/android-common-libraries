@@ -1,0 +1,18 @@
+
+include ':android-betterpickers'
+include ':android-line-chart'
+include ':AppBilling3'
+include ':AppBilling'
+include ':android-support-v4-preferencefragment'
+include ':FileSelector'
+include ':UnlockChecker'
+include ':ViewPagerIndicator'
+include ':AppMsg'
+include ':ColourSelector'
+include ':CustomPreferences'
+include ':google-market_licensing'
+include ':SSHLib'
+include ':SSHLibTrim'
+include ':aFileChooser'
+
+

@@ -1,0 +1,1 @@
+gradlew --info -Dorg.gradle.project.SVN_REVISION=1000 -Dorg.gradle.project.BUILD_NUMBER=34 clean build publish

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:gravity="center|top"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="8dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/color_rgb_tvRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r" />
+
+            <SeekBar
+                android:id="@+id/color_rgb_seekRed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:max="255"
+                android:minWidth="150dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/color_rgb_tvGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g" />
+
+            <SeekBar
+                android:id="@+id/color_rgb_seekGreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:max="255"
+                android:minWidth="150dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/color_rgb_tvBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/b" />
+
+            <SeekBar
+                android:id="@+id/color_rgb_seekBlue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:max="255"
+                android:minWidth="150dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/color_rgb_tvAlpha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a" />
+
+            <SeekBar
+                android:id="@+id/color_rgb_seekAlpha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:max="255"
+                android:minWidth="150dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/color_rgb_imgpreview"
+            android:layout_width="64dip"
+            android:layout_height="64dip"
+            android:background="@drawable/transparentbackrepeat"
+            android:contentDescription="@string/colour_preview"
+            android:padding="8dp"
+            android:scaleType="fitXY" >
+        </ImageView>
+    </LinearLayout>
+
+</LinearLayout>

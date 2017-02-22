@@ -1,0 +1,16 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <nz.org.winters.android.custompreference.IntegerPreference
+      android:defaultValue="1"
+
+      android:dialogMessage="@string/update_end_call_count"
+      app:dialogTitle="@string/count"
+      android:key="testpref"
+      android:summary="@string/update_end_call_summary"
+      android:title="@string/update_end_call_count"
+      >
+
+  </nz.org.winters.android.custompreference.IntegerPreference>
+
+</PreferenceScreen>

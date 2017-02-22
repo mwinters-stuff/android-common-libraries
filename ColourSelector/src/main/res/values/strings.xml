@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="r">R</string>
+    <string name="g">G</string>
+    <string name="b">B</string>
+    <string name="a">A</string>
+    <string name="colour_preview">colour preview</string>
+    <string name="hex">HEX</string>
+    <string name="app_name">ColourSelector</string>
+</resources>

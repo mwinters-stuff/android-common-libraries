@@ -1,0 +1,125 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+buildscript {
+    repositories {
+        maven { url rootProject.ext.localMaven }
+    }
+    dependencies {
+        classpath rootProject.ext.gradlePlugin
+    }
+}
+
+repositories {
+    maven { url rootProject.ext.localMaven }
+}
+
+dependencies {
+    compile "com.android.support:support-v4:${rootProject.ext.supportVersion}"
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
+    compile project(':android-betterpickers')
+
+    compile 'com.android.support:support-v4:22.1.1'
+
+    androidTestCompile 'org.hamcrest:hamcrest-integration:1.1',
+            'org.hamcrest:hamcrest-core:1.1',
+            'org.hamcrest:hamcrest-library:1.1'
+
+    androidTestCompile ('com.android.support.test:runner:0.2'){
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile ('com.android.support.test:rules:0.2'){
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+
+    androidTestCompile ('com.android.support.test.espresso:espresso-core:2.1'){
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.android.support', module: 'support-annotations'
+
+    }
+//    androidTestCompile ('com.android.support.test.espresso:espresso-contrib:2.1'){
+//        exclude group: 'com.android.support', module: 'support-v4'
+//        exclude group: 'com.android.support', module: 'appcompat-v7'
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//
+//    }
+//
+//    androidTestCompile ('com.android.support.test.espresso:espresso-intents:2.1'){
+//        exclude group: 'com.android.support', module: 'support-v4'
+//        exclude group: 'com.android.support', module: 'appcompat-v7'
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//
+//    }
+
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion rootProject.ext.minSdkVersion
+
+        versionCode rootProject.ext.buildNumber
+        versionName rootProject.ext.version
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+
+}
+
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+//Execute "gradle clean jarRelease" to cook jar.
+android.libraryVariants.all { variant ->
+    def name = variant.buildType.name
+    if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+        return; // Skip debug builds.
+    }
+
+}
+
+// To publish to maven local execute "gradle clean build publishToMavenLocal"
+// To publish to nexus execute "gradle clean build publish"
+android.libraryVariants
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact "${project.buildDir}/outputs/aar/${project.name}-release.aar"
+            artifactId project.name
+            groupId rootProject.ext.group
+            version android.defaultConfig.versionName
+
+            artifact androidSourcesJar {
+                classifier "sources"
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url rootProject.ext.localMavenPublish
+        }
+    }
+}
+

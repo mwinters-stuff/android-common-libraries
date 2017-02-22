@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+									android:key="screen_general"
+									android:summary="App test"
+									android:title="General" >
+      <EditTextPreference
+          android:key="editpref"
+        ></EditTextPreference>
+
+			<nz.org.winters.android.custompreference.IntervalPickerPreference
+					android:dialogTitle="Interval Picker"
+					android:key="testpref"
+
+					android:title="Interval" >
+			</nz.org.winters.android.custompreference.IntervalPickerPreference>
+</PreferenceScreen>
