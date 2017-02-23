@@ -1,29 +1,57 @@
+
 ext {
-  gradlePlugin = 'com.android.tools.build:gradle:2.2.3'
-  compileSdkVersion = 25
-  buildToolsVersion = "25.0.2"
-  targetSdkVersion = 25
-  minSdkVersion = 15
-  supportVersion = "25.1.0"
-  group = 'nz.org.winters'
-  version = getTheVersion()
-  buildNumber = getTheBuildNumber()
-  baseMavenURL = 'http://localhost:9191/repository'
-  localMaven = baseMavenURL + '/internal'
-  isReleaseVersion = !version.endsWith("SNAPSHOT")
-  localMavenPublish = baseMavenURL + "/internal"
-  if (!isReleaseVersion) {
-    localMavenPublish = baseMavenURL + "/snapshots"
-  }
+    gradlePlugin = 'com.android.tools.build:gradle:2.2.3'
+    compileSdkVersion = 25
+    buildToolsVersion = "25.0.2"
+    targetSdkVersion = 25
+    minSdkVersion = 15
+    supportVersion = "25.2.0"
+    version = getTheVersion()
+    buildNumber = getTheBuildNumber()
+
+    bintrayRepo = 'maven'
+    publishedGroupId = 'nz.org.winters'
+    siteUrl = 'https://github.com/wintersandroid/android-common-libraries'
+    gitUrl = 'https://github.com/wintersandroid/android-common-libraries.git'
+
+    libraryVersion = getTheVersion()
+
+    developerId = 'wintersandroid'
+    developerName = 'Mathew Winters'
+    developerEmail = 'android@winters.org.nz'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
 }
 
-def getBuildMajor(){
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:2.2.3"
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+def static getBuildMajor(){
   return 2;
 }
+
 def getTheVersion() {
   def buildMajor = getBuildMajor();
   def buildNumber = getTheBuildNumber();
-  if( buildNumber == 999)
+  if( buildNumber == 0)
   {
     return "${buildMajor}.${buildNumber}-SNAPSHOT";
 
@@ -34,5 +62,17 @@ def getTheVersion() {
 }
 
 def getTheBuildNumber(){
-  return hasProperty('BUILD_NUMBER') ? BUILD_NUMBER.toInteger() : 999;
+  return hasProperty('BUILD_NUMBER') ? BUILD_NUMBER.toInteger() : 0;
+}
+
+def getBintrayUser(){
+    return hasProperty('BINTRAY_USER') ? BINTRAY_USER : ""
+}
+
+def getBintrayApiKey(){
+    return hasProperty('BINTRAY_KEY') ? BINTRAY_KEY : ""
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AppMsg" />
+            <option value="$PROJECT_DIR$/ColourSelector" />
+            <option value="$PROJECT_DIR$/CustomPreferences" />
+            <option value="$PROJECT_DIR$/FileSelector" />
+            <option value="$PROJECT_DIR$/SSHLib" />
+            <option value="$PROJECT_DIR$/SSHLibTrim" />
+            <option value="$PROJECT_DIR$/UnlockChecker" />
+            <option value="$PROJECT_DIR$/ViewPagerIndicator" />
+            <option value="$PROJECT_DIR$/aFileChooser" />
+            <option value="$PROJECT_DIR$/android-betterpickers" />
+            <option value="$PROJECT_DIR$/android-line-chart" />
+            <option value="$PROJECT_DIR$/android-support-v4-preferencefragment" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
