@@ -8,18 +8,18 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/AppMsg" />
-            <option value="$PROJECT_DIR$/ColourSelector" />
-            <option value="$PROJECT_DIR$/CustomPreferences" />
-            <option value="$PROJECT_DIR$/FileSelector" />
-            <option value="$PROJECT_DIR$/SSHLib" />
-            <option value="$PROJECT_DIR$/SSHLibTrim" />
-            <option value="$PROJECT_DIR$/UnlockChecker" />
-            <option value="$PROJECT_DIR$/ViewPagerIndicator" />
-            <option value="$PROJECT_DIR$/aFileChooser" />
+            <option value="$PROJECT_DIR$/a-file-chooser" />
             <option value="$PROJECT_DIR$/android-betterpickers" />
             <option value="$PROJECT_DIR$/android-line-chart" />
             <option value="$PROJECT_DIR$/android-support-v4-preferencefragment" />
+            <option value="$PROJECT_DIR$/app-msg" />
+            <option value="$PROJECT_DIR$/colour-selector" />
+            <option value="$PROJECT_DIR$/custom-preferences" />
+            <option value="$PROJECT_DIR$/file-selector" />
+            <option value="$PROJECT_DIR$/ssh-lib" />
+            <option value="$PROJECT_DIR$/ssh-lib-trim" />
+            <option value="$PROJECT_DIR$/unlock-checker" />
+            <option value="$PROJECT_DIR$/view-pager-indicator" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

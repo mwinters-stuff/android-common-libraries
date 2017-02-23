@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 ext {
-    bintrayName = 'android-better-pickers'
-    libraryName = 'BetterPickers'
+    bintrayName = 'android-betterpickers'
+    libraryName = 'Android Better Pickers'
     artifact = "${bintrayName}"
     libraryDescription = "${libraryName}"
 

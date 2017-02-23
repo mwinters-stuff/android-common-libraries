@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AppMsg/AppMsg.iml" filepath="$PROJECT_DIR$/AppMsg/AppMsg.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ColourSelector/ColourSelector.iml" filepath="$PROJECT_DIR$/ColourSelector/ColourSelector.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CustomPreferences/CustomPreferences.iml" filepath="$PROJECT_DIR$/CustomPreferences/CustomPreferences.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FileSelector/FileSelector.iml" filepath="$PROJECT_DIR$/FileSelector/FileSelector.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SSHLib/SSHLib.iml" filepath="$PROJECT_DIR$/SSHLib/SSHLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SSHLibTrim/SSHLibTrim.iml" filepath="$PROJECT_DIR$/SSHLibTrim/SSHLibTrim.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UnlockChecker/UnlockChecker.iml" filepath="$PROJECT_DIR$/UnlockChecker/UnlockChecker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aFileChooser/aFileChooser.iml" filepath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/a-file-chooser/a-file-chooser.iml" filepath="$PROJECT_DIR$/a-file-chooser/a-file-chooser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-betterpickers/android-betterpickers.iml" filepath="$PROJECT_DIR$/android-betterpickers/android-betterpickers.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-betterpickers/android-betterpickers.iml" filepath="$PROJECT_DIR$/android-betterpickers/android-betterpickers.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-common-libraries.iml" filepath="$PROJECT_DIR$/android-common-libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-line-chart/android-line-chart.iml" filepath="$PROJECT_DIR$/android-line-chart/android-line-chart.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-support-v4-preferencefragment/android-support-v4-preferencefragment.iml" filepath="$PROJECT_DIR$/android-support-v4-preferencefragment/android-support-v4-preferencefragment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-msg/app-msg.iml" filepath="$PROJECT_DIR$/app-msg/app-msg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/colour-selector/colour-selector.iml" filepath="$PROJECT_DIR$/colour-selector/colour-selector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom-preferences/custom-preferences.iml" filepath="$PROJECT_DIR$/custom-preferences/custom-preferences.iml" />
+      <module fileurl="file://$PROJECT_DIR$/file-selector/file-selector.iml" filepath="$PROJECT_DIR$/file-selector/file-selector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssh-lib/ssh-lib.iml" filepath="$PROJECT_DIR$/ssh-lib/ssh-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssh-lib-trim/ssh-lib-trim.iml" filepath="$PROJECT_DIR$/ssh-lib-trim/ssh-lib-trim.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unlock-checker/unlock-checker.iml" filepath="$PROJECT_DIR$/unlock-checker/unlock-checker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-pager-indicator/view-pager-indicator.iml" filepath="$PROJECT_DIR$/view-pager-indicator/view-pager-indicator.iml" />
     </modules>
   </component>
 </project>

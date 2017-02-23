@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayName = 'a-file-chooser'
-    libraryName = 'aFileChooser'
+    libraryName = 'A File Chooser'
     artifact = "${bintrayName}"
     libraryDescription = "${libraryName}"
 }
