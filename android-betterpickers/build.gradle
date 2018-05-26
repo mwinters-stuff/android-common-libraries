@@ -49,11 +49,11 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:support-v4:${rootProject.ext.supportVersion}"
-    compile "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
+    implementation "com.android.support:support-v4:${rootProject.ext.supportVersion}"
+    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
 
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile fileTree(dir: 'libs', include: '*.jar')
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation fileTree(dir: 'libs', include: '*.jar')
 }
 
 apply from: '../installv1.gradle'

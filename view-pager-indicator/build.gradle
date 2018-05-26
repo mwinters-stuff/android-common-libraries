@@ -8,8 +8,8 @@ ext {
 }
 
 dependencies {
-    compile "com.android.support:support-v4:${rootProject.ext.supportVersion}"
-    compile fileTree(dir: 'libs', include: '*.jar')
+    implementation "com.android.support:support-v4:${rootProject.ext.supportVersion}"
+    implementation fileTree(dir: 'libs', include: '*.jar')
 }
 
 android {
