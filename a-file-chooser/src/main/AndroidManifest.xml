@@ -17,7 +17,8 @@
  <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ipaulpro.afilechooser">
 
-    <uses-sdk android:minSdkVersion="7" />
+    <uses-sdk />
+    <application>
     <activity
             android:name="com.ipaulpro.afilechooser.FileChooserActivity"
             android:icon="@drawable/ic_chooser"
@@ -33,6 +34,7 @@
             <data android:mimeType="*/*" />
         </intent-filter>
     </activity>
+    </application>
    <!-- <provider
             android:name="com.ianhanniballake.localstorage.LocalStorageProvider"
             android:authorities="com.ianhanniballake.localstorage.documents"
