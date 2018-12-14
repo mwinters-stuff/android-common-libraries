@@ -109,34 +109,34 @@ public class LineChart<XT, YT> extends View
   @SuppressWarnings("ConstantConditions")
   void initializePaint()
   {
-    mHoloLightBlue = mResources.getColor(R.color.holo_blue_light);
+    mHoloLightBlue = mResources.getColor(R.color.holo_blue_light, null);
 
 
     Typeface localTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/RobotoCondensed-Bold.ttf");
-    mTextPaint.setColor(mResources.getColor(R.color.widget_dark_grey));
+    mTextPaint.setColor(mResources.getColor(R.color.widget_dark_grey, null));
     mTextPaint.setStrokeWidth(3.0F * mDensity);
     mTextPaint.setTextSize(mTextSize);
     mTextPaint.setTextAlign(Paint.Align.CENTER);
 
-    mBorderPaint.setColor(mResources.getColor(R.color.border_color));
+    mBorderPaint.setColor(mResources.getColor(R.color.border_color, null));
     mBorderPaint.setStyle(Paint.Style.STROKE);
     mBorderPaint.setStrokeWidth(1.0F * mDensity);
 
     mLabelPaint.setTypeface(localTypeface);
-    mLabelPaint.setColor(mResources.getColor(R.color.label_color));
+    mLabelPaint.setColor(mResources.getColor(R.color.label_color, null));
     mLabelPaint.setStrokeWidth(3.0F * mDensity);
     mLabelPaint.setTextSize(mTextSize);
     mLabelPaint.setTextAlign(Paint.Align.CENTER);
     mLabelPaint.setAntiAlias(true);
-    mLabelPaint.setShadowLayer(2.0F, 1.0F, 1.0F, mResources.getColor(R.color.text_shadow_white));
+    mLabelPaint.setShadowLayer(2.0F, 1.0F, 1.0F, mResources.getColor(R.color.text_shadow_white, null));
 
-    mBrightLabelTextPaint.setColor(mResources.getColor(R.color.bright_text_color));
+    mBrightLabelTextPaint.setColor(mResources.getColor(R.color.bright_text_color, null));
     mBrightLabelTextPaint.setStrokeWidth(3.0F * mDensity);
     mBrightLabelTextPaint.setTextSize(mTextSize);
     mBrightLabelTextPaint.setTextAlign(Paint.Align.CENTER);
     mBrightLabelTextPaint.setAntiAlias(true);
 
-    mLabelPaintLeft.setColor(mResources.getColor(R.color.label_color));
+    mLabelPaintLeft.setColor(mResources.getColor(R.color.label_color, null));
     mLabelPaintLeft.setTypeface(localTypeface);
     mLabelPaintLeft.setTextSize(mTextSize);
     mLabelPaintLeft.setTextAlign(Paint.Align.LEFT);
@@ -164,16 +164,16 @@ public class LineChart<XT, YT> extends View
     mDotPaint.setStyle(Paint.Style.FILL_AND_STROKE);
     mDotPaint.setStrokeWidth(2.0F * mDensity);
     mDotShadowPaint.setStyle(Paint.Style.FILL);
-    mDotShadowPaint.setColor(getResources().getColor(R.color.shadow_color));
-    mGridPaint.setColor(mResources.getColor(R.color.grid_color));
+    mDotShadowPaint.setColor(getResources().getColor(R.color.shadow_color, null));
+    mGridPaint.setColor(mResources.getColor(R.color.grid_color, null));
     mGridPaint.setStrokeWidth(0.5F * mDensity);
-    mBrightGridPaint.setColor(mResources.getColor(R.color.light_grid_color));
+    mBrightGridPaint.setColor(mResources.getColor(R.color.light_grid_color, null));
     mBrightGridPaint.setStrokeWidth(0.5F * mDensity);
     mScoreCardBorderPaint.setStyle(Paint.Style.STROKE);
     mScoreCardBorderPaint.setStrokeWidth(1.0F * mDensity);
-    mScoreCardBorderPaint.setColor(mResources.getColor(R.color.scorecard_border_color));
+    mScoreCardBorderPaint.setColor(mResources.getColor(R.color.scorecard_border_color, null));
     mScoreCardPaint.setStyle(Paint.Style.FILL);
-    mScoreCardPaint.setColor(mResources.getColor(R.color.scorecard_color));
+    mScoreCardPaint.setColor(mResources.getColor(R.color.scorecard_color, null));
     mScoreCardPaint.setShadowLayer(2.0F * mDensity, 0.0F, 2.0F * mDensity, mResources.getColor(R.color.scorecard_border_shadow_color));
 
     mScoreCard.setPaints(mLabelPaint, mScoreCardPaint, mScoreCardBorderPaint);

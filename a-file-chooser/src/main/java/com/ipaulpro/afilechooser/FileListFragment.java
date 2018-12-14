@@ -17,11 +17,12 @@
 package com.ipaulpro.afilechooser;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.app.ListFragment;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
+import androidx.fragment.app.ListFragment;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
 import android.view.View;
 import android.widget.ListView;
 
@@ -72,13 +73,13 @@ public class FileListFragment extends ListFragment implements
     }
 
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
+    public void onAttach(Context context) {
+        super.onAttach(context);
 
         try {
-            mListener = (Callbacks) activity;
+            mListener = (Callbacks) getActivity();
         } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
+            throw new ClassCastException(context.toString()
                     + " must implement FileListFragment.Callbacks");
         }
     }
@@ -99,7 +100,7 @@ public class FileListFragment extends ListFragment implements
         setListAdapter(mAdapter);
         setListShown(false);
 
-        getLoaderManager().initLoader(LOADER_ID, null, this);
+        LoaderManager.getInstance(this).initLoader(LOADER_ID, null, this);
 
         super.onActivityCreated(savedInstanceState);
     }

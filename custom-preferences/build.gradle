@@ -8,25 +8,25 @@ ext {
 }
 
 dependencies {
-    implementation "com.android.support:support-v4:${rootProject.ext.supportVersion}"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation fileTree(dir: 'libs', include: '*.jar')
-    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
     implementation project(':android-betterpickers')
 
-    implementation "com.android.support:support-v4:${rootProject.ext.supportVersion}"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     androidTestImplementation 'org.hamcrest:hamcrest-integration:1.1',
             'org.hamcrest:hamcrest-core:1.1',
             'org.hamcrest:hamcrest-library:1.1'
 
-    androidTestImplementation ('com.android.support.test:runner:0.2'){
+    androidTestImplementation ('androidx.test:runner:1.1.1'){
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation ('com.android.support.test:rules:0.2'){
+    androidTestImplementation ('androidx.test:rules:1.1.1'){
         exclude group: 'com.android.support', module: 'support-annotations'
     }
 
-    androidTestImplementation ('com.android.support.test.espresso:espresso-core:2.1'){
+    androidTestImplementation ('androidx.test.espresso:espresso-core:3.1.1'){
         exclude group: 'com.android.support', module: 'support-v4'
         exclude group: 'com.android.support', module: 'appcompat-v7'
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -43,7 +43,7 @@ android {
 
         versionCode rootProject.ext.buildNumber
         versionName rootProject.ext.version
-        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
     }
 
