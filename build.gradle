@@ -33,7 +33,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:3.2.1"
+        classpath "com.android.tools.build:gradle:3.4.2"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
     }
@@ -75,6 +75,6 @@ def getBintrayApiKey(){
     return hasProperty('BINTRAY_KEY') ? BINTRAY_KEY : ""
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.6'
-}
+//task wrapper(type: Wrapper) {
+//    gradleVersion = '4.6'
+//}
